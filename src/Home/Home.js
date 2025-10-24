@@ -62,13 +62,21 @@ const Home = () => {
           <p className="name">Timur Joldasbayev</p>
           <p className="profession">Software Engineer</p>
           <ul className="socialMedia">
-            <li className="sm-items" id="telegram"></li>
-            <li className="sm-items" id="linkedin"></li>
-            <li className="sm-items" id="email"></li>
-            <li className="sm-items" id="instagram"></li>
+            <li className="sm-items" id="telegram">
+              <a href="https://t.me/t1mur_25"><img src="../../images/telegram.png" alt="Telegram logo" className="sm-pics"/></a>
+            </li>
+            <li className="sm-items" id="linkedin">
+              <a href="https://linkedin.com/in/timur-joldasbaev01"><img src="../../images/linkedin.png" alt="LinkedIn logo" className="sm-pics"/></a>
+            </li>
+            <li className="sm-items" id="email">
+              <a href="mailto:timurjoldasbayev01@gmail.com"><img src="../../images/email.png" alt="Gmail logo" className="sm-pics"/></a>
+            </li>
+            <li className="sm-items" id="instagram">
+              <a href="https://www.instagram.com/t1mur_2501/"><img src="../../images/instagram.png" alt="Instagram logo" className="sm-pics"/></a>
+            </li>
           </ul>
           <div className="home-buttons">
-            <div className="btn-contact">Contact me</div>
+            <a href="#contact"><div className="btn-contact">Contact me</div></a>
             <div className="btn-cv">Download CV</div>
           </div>
         </div>
