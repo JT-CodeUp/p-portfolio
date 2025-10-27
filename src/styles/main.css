@@ -7,10 +7,18 @@
   outline: none;
 }
 
-li {
+li, button {
   cursor: pointer;
 }
 
-p {
+p, input, a {
   font-family: sans-serif;
+  color: var(--main-text-color);
+}
+
+:root {
+  --main-bg-color:#293bda;
+  --main-text-color:aliceblue;
+  --sub-text-color:rgba(240, 248, 255, 0.534);
+  --main-font-size:50px;
 }/*# sourceMappingURL=main.css.map */

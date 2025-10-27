@@ -1,0 +1,49 @@
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  background-color: #111;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.circular-progress {
+  --size: 100px;
+  --track-color: #333;
+  --progress-color:#293bda;
+  --percentage: 85;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: conic-gradient(var(--progress-color) calc(var(--percentage) * 1%), var(--track-color) 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-icon {
+  width: 70%;
+  height: 70%;
+  background-color: #111;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: #ccc;
+}
+
+.progress-text {
+  margin-top: 10px;
+  color: #293bda;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.progress-label {
+  margin-top: 5px;
+  color: #bbb;
+  font-size: 14px;
+}/*# sourceMappingURL=ProgressCircle.css.map */
