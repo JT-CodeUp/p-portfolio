@@ -4,6 +4,7 @@ import "./Home.scss";
 
 const Home = () => {
   const [activeHash, setActiveHash] = useState(window.location.hash || "#home");
+  const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
     const handleHashChange = () => {
       setActiveHash(window.location.hash || "#home");
@@ -54,6 +55,32 @@ const Home = () => {
             >
               Contact me
             </a>
+          </li>
+        </ul>
+      </div>
+      <div className="nav-burger">
+        <img
+          src="../../images/transparent-logo.png"
+          alt="Logo"
+          className="logo"
+        />
+        <ul className="burger" onClick={() => setIsOpen(!isOpen)}>
+          <li className={`burger-items ${isOpen ? "top" : ""}`}></li>
+          <li className={`burger-items ${isOpen ? "middle" : ""}`}></li>
+          <li className={`burger-items ${isOpen ? "bottom" : ""}`}></li>
+        </ul>
+        <ul className={`nav-mobile ${isOpen ? "" : "closed"}`}>
+          <li className="mobile-items">
+            <a href="#home-mobile">Home</a>
+          </li>
+          <li className="mobile-items">
+            <a href="#about">About me</a>
+          </li>
+          <li className="mobile-items">
+            <a href="#services">Services</a>
+          </li>
+          <li className="mobile-items">
+            <a href="#contact">Contact me</a>
           </li>
         </ul>
       </div>
@@ -115,7 +142,58 @@ const Home = () => {
           />
         </div>
       </div>
-      <div className="about" id="about">
+      <div className="home-mobile" id="home-mobile">
+        <div className="context">
+          <p className="hello">Hi I am</p>
+          <p className="name">Timur Joldasbayev</p>
+          <p className="profession">Software Engineer</p>
+          <ul className="socialmedia">
+            <li className="sm-items" id="telegram">
+              <a href="https://t.me/t1mur_25">
+                <img
+                  src="../../images/telegram.png"
+                  alt="Telegram logo"
+                  className="sm-pics"
+                />
+              </a>
+            </li>
+            <li className="sm-items" id="linkedin">
+              <a href="https://linkedin.com/in/timur-joldasbaev01">
+                <img
+                  src="../../images/linkedin.png"
+                  alt="LinkedIn logo"
+                  className="sm-pics"
+                />
+              </a>
+            </li>
+            <li className="sm-items" id="email">
+              <a href="mailto:timurjoldasbayev01@gmail.com">
+                <img
+                  src="../../images/email.png"
+                  alt="Gmail logo"
+                  className="sm-pics"
+                />
+              </a>
+            </li>
+            <li className="sm-items" id="instagram">
+              <a href="https://www.instagram.com/t1mur_2501/">
+                <img
+                  src="../../images/instagram.png"
+                  alt="Instagram logo"
+                  className="sm-pics"
+                />
+              </a>
+            </li>
+          </ul>
+          <div className="home-buttons">
+            <a href="#contact">
+              <div className="btn-contact">Contact me</div>
+            </a>
+            <div className="btn-cv">Download CV</div>
+          </div>
+        </div>
+      </div>
+      {/* <div className="about" id="about">
         <h1 className="about-title">About me</h1>
         <p className="about-subtext">
           Lorem ipsum dolor sit. Lorem ipsum dolor sit, amet consectetur
@@ -407,7 +485,7 @@ const Home = () => {
           </li>
         </ul>
         <p className="doneby">Designed by Timur Joldasbayev timurjoldasbayev01@gmail.com</p>
-      </div>
+      </div> */}
     </div>
   );
 };
